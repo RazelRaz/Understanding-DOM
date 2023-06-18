@@ -13,6 +13,14 @@ for (const navItem of navItems) {
 const myForm = document.getElementsByTagName('form');
 console.log(myForm);
 
-//it will catch first a of this page
+//it will catch first a tag of this page
 const firstA = document.querySelector('a');
 firstA.style.color ='green';
+
+//it will catch All a tag of this page
+const allA = document.querySelectorAll('a');
+console.log(allA);
+
+const specificA =  document.querySelector('.nav-item:last-child a');
+console.log(specificA);
+specificA.style.color = 'green';
