@@ -21,6 +21,20 @@ firstA.style.color ='green';
 const allA = document.querySelectorAll('a');
 console.log(allA);
 
+
 const specificA =  document.querySelector('.nav-item:last-child a');
 console.log(specificA);
 specificA.style.color = 'green';
+
+//catch all last child items
+const specificAs = document.querySelectorAll('li:last-child a');
+for (const singleSpecificA of specificAs) {
+    singleSpecificA.style.backgroundColor = 'black'
+}
+
+//catch a parent div class and selec all specific items
+const artClass = document.querySelector('.artClass').querySelectorAll('a.text-uppercase.tm-color-primary.tm-font-semibold');
+console.log(artClass);
+for (const singleArtClass of artClass) {
+    singleArtClass.style.fontSize = '20px';
+}
