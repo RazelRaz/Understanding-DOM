@@ -64,3 +64,23 @@ nwLi.innerHTML = 'hello'
 
 const catchMAinmenu = document.querySelector('ul.navbar-nav.ml-auto');
 catchMAinmenu.appendChild(nwLi);
+
+// dom event
+
+const fButton = document.querySelector('a.tm-color-white.tm-btn-white-bordered');
+console.log(fButton);
+fButton.addEventListener('click', (e) => {
+    console.log('im first button');
+    alert('You click the button')
+})
+
+const contact_name = document.getElementById('contact_name');
+console.log(contact_name);
+contact_name.addEventListener('keypress', () => {
+    alert('Hi im from DOM. Please DOnt Write anyting')
+})
+
+const contact_email = document.getElementById('contact_email');
+contact_email.addEventListener('blur', () => {
+    alert('Hi Im DOM. DOnt be shy, write someting')
+})
