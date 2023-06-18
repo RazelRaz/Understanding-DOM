@@ -32,9 +32,35 @@ for (const singleSpecificA of specificAs) {
     singleSpecificA.style.backgroundColor = 'black'
 }
 
-//catch a parent div class and selec all specific items
+//DOM travarsal
+//catch a parent div class and selec all specific items - not recommended
 const artClass = document.querySelector('.artClass').querySelectorAll('a.text-uppercase.tm-color-primary.tm-font-semibold');
 console.log(artClass);
 for (const singleArtClass of artClass) {
     singleArtClass.style.fontSize = '20px';
 }
+
+// parent item to children item
+const childNavitem = document.querySelector('.nav-item');
+console.log(childNavitem.parentElement);
+console.log(childNavitem.parentElement.children);
+
+// create a div
+const divElement = document.createElement('div');
+divElement.className = 'hero_area';
+divElement.style.color = 'red'
+divElement.setAttribute('title', 'red div')
+console.log(divElement);
+
+//select a section
+const tmSsection2 = document.querySelector('.tm-section-2');
+tmSsection2.appendChild(divElement);
+
+const nwLi = document.createElement('li');
+console.log(nwLi);
+nwLi.className = 'nav-item';
+nwLi.style.background = 'white';
+nwLi.innerHTML = 'hello'
+
+const catchMAinmenu = document.querySelector('ul.navbar-nav.ml-auto');
+catchMAinmenu.appendChild(nwLi);
